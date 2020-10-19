@@ -1,0 +1,84 @@
+<html> 
+  <head>
+    <title>LookingYou!</title>
+    <style> *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    
+    html, body{
+      height: 100%;
+    }
+    
+    .container{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    #checkbox-menu{
+      position: relative;
+      opacity: 0;
+    }
+    
+    label{
+      cursor: pointer;
+      position: relative;
+      display: block;
+      height: 22px;
+      width: 30px;
+    }
+    
+    label span{
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 100%;
+      border-radius: 30px;
+      background: #1f1f6f;
+      transition: 0.25s ease-in-out;
+    }
+    
+    label span:nth-child(1){
+      top: 0;
+    }
+    
+    label span:nth-child(2){
+      top: 8px;
+    }
+    
+    label span:nth-child(3){
+      top: 16px;
+    }
+    
+    #checkbox-menu:checked + label span:nth-child(1){
+      transform: rotate(-45deg);
+      top: 8px;
+    }
+    
+    #checkbox-menu:checked + label span:nth-child(2){
+      opacity: 0;
+    }
+    
+    #checkbox-menu:checked + label span:nth-child(3){
+      transform: rotate(45deg);
+      top:8px;
+    }
+    </style> 
+  </head>
+  <body>
+  <div class="container">
+    <input type="checkbox" id="checkbox-menu">
+    <label for="checkbox-menu">
+      <span><a href="#/home/">Home</a></span>
+      <span><a href="#/sobrenos/">Sobre nós</a></span>
+      <span><a href="#/servicos/">Serviços</a></span>
+      <span><a href="#/fotos/">Fotos</a></span>
+      <span><a href="#/contato/">Contato</a></dspan>
+      <span><a href="#/trabalheconosco/">Trabalhe Conosco</a></span>
+    </label>
+    </div>
+    </html>
+    </body>
